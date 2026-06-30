@@ -85,10 +85,14 @@
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            navLinks.forEach((l) => l.classList.remove('active'));
+            navLinks.forEach((l) => {
+              l.classList.remove('active');
+              l.removeAttribute('aria-current');
+            });
             const link = linkFor(entry.target.id);
             if (link && !link.classList.contains('nav-cta')) {
               link.classList.add('active');
+              link.setAttribute('aria-current', 'page');
             }
           }
         });

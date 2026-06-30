@@ -6,24 +6,21 @@
 ================================================================= */
 
 :root {
-  /* Couleurs */
-  --paper:        #f7f3ea;   /* fond papier crème */
-  --paper-2:      #f1ebdd;   /* fond sections alternées */
-  --ink:          #211c18;   /* texte principal, encre */
-  --ink-soft:     #4a423b;   /* texte secondaire */
-  --ink-mute:     #7a6f64;   /* texte tertiaire */
-  --bordeaux:     #6d2230;   /* accent principal */
+  --paper:        #f7f3ea;
+  --paper-2:      #f1ebdd;
+  --ink:          #211c18;
+  --ink-soft:     #4a423b;
+  --ink-mute:     #7a6f64;
+  --bordeaux:     #6d2230;
   --bordeaux-d:   #531a25;
-  --gold:         #a6843b;   /* accent or */
-  --line:         #d9cfba;   /* séparateurs */
+  --gold:         #a6843b;
+  --line:         #d9cfba;
   --white:        #fffdf8;
 
-  /* Typo */
   --serif:   'EB Garamond', 'Cormorant Garamond', Georgia, serif;
   --display: 'Cormorant Garamond', Georgia, serif;
   --sans:    'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Mise en page */
   --maxw: 1140px;
   --radius: 2px;
 }
@@ -44,6 +41,9 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
+
+:focus-visible { outline: 2px solid var(--bordeaux); outline-offset: 3px; }
+:focus:not(:focus-visible) { outline: none; }
 
 /* ------------------ Layout ------------------ */
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
@@ -194,7 +194,6 @@ ul, ol { list-style: none; }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* Photo du hero */
 .hero-photo {
   position: relative;
   justify-self: center;
@@ -259,7 +258,15 @@ ul, ol { list-style: none; }
 }
 .btn-large { padding: 18px 48px; font-size: 14px; }
 
-/* Meta stats */
+/* ------------------ Skip link (accessibilité) ------------------ */
+.skip-link {
+  position: absolute; top: -100px; left: 16px;
+  background: var(--bordeaux); color: var(--white);
+  padding: 12px 20px; z-index: 200; border-radius: 2px;
+  font-family: var(--sans); font-size: 14px;
+}
+.skip-link:focus { top: 16px; }
+
 .hero-meta {
   display: flex; align-items: center; gap: 44px;
   border-top: 1px solid var(--line);
@@ -282,7 +289,6 @@ ul, ol { list-style: none; }
 }
 .meta-divider { width: 1px; height: 44px; background: var(--line); }
 
-/* Scroll cue */
 .scroll-cue {
   position: absolute; bottom: 32px; left: 50%;
   transform: translateX(-50%);
@@ -600,7 +606,6 @@ ul, ol { list-style: none; }
 }
 .tl-desc { color: var(--ink-soft); font-size: 16px; }
 
-/* Formation */
 .formation-title {
   font-family: var(--display);
   font-size: 26px; font-weight: 600;
@@ -1089,14 +1094,11 @@ ul, ol { list-style: none; }
     font-size: 9.5pt !important;
     margin: 0 !important; padding: 0 !important;
   }
-  /* Masquer tout le site */
   body > *:not(#cv-print) { display: none !important; }
-  /* Afficher uniquement le CV */
   #cv-print {
     display: block !important;
     position: static !important;
   }
   .cv-page { box-shadow: none; }
-  /* Forcer les couleurs réelles (pas de grisem. du navigateur) */
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }

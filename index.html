@@ -3,6 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="canonical" href="https://dieuvit-k.github.io/dieuvit.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dieuvit Kibamba Niangui — Chercheur Doctorant · IA & Data · Créateur" />
+  <meta property="og:description" content="Doctorant en Biochimie &amp; Microbiologie à l'IRSEN. Enseignant SVT, Formateur IA, Créateur de contenu. Brazzaville, Congo." />
+  <meta property="og:image" content="https://dieuvit-k.github.io/dieuvit.github.io/assets/photo.jpg" />
+  <meta property="og:url" content="https://dieuvit-k.github.io/dieuvit.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dieuvit Kibamba Niangui — Chercheur Doctorant · IA & Data · Créateur" />
+  <meta name="twitter:description" content="Doctorant en Biochimie &amp; Microbiologie à l'IRSEN. Enseignant SVT, Formateur IA, Créateur de contenu." />
+  <meta name="twitter:image" content="https://dieuvit-k.github.io/dieuvit.github.io/assets/photo.jpg" />
+
+  <!-- Preload hero image (LCP) -->
+  <link rel="preload" as="image" href="assets/photo.jpg" fetchpriority="high" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dieuvit Haïdide Kibamba Niangui",
+    "jobTitle": "Chercheur Doctorant en Biochimie & Microbiologie",
+    "url": "https://dieuvit-k.github.io/dieuvit.github.io/",
+    "image": "https://dieuvit-k.github.io/dieuvit.github.io/assets/photo.jpg",
+    "email": "dieuvitk@gmail.com",
+    "telephone": "+242 06 505 80 34",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brazzaville",
+      "addressCountry": "CG"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/dieuvit-kibamba",
+      "https://github.com/dieuvit-k"
+    ],
+    "knowsLanguage": ["fr", "en"],
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "IRSEN — Institut National de Recherche en Sciences Exactes et Naturelles"
+      },
+      {
+        "@type": "Organization",
+        "name": "Université Marien Ngouabi"
+      }
+    ]
+  }
+  </script>
+
   <meta name="description" content="Dieuvit Haïdide Kibamba Niangui — Chercheur Doctorant en Biochimie & Microbiologie, Enseignant SVT, Analyste IA & Data, Créateur de Contenu. IRSEN & IRA, Brazzaville." />
   <title>Dieuvit Kibamba Niangui — Chercheur Doctorant · IA & Data · Créateur</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,6 +65,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu</a>
 
   <!-- ===================== HEADER / NAV ===================== -->
   <header class="site-header" id="top">
@@ -37,7 +93,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- ===================== HERO ===================== -->
     <section class="hero">
       <div class="hero-inner">
@@ -59,13 +115,17 @@
               de la recherche microbiologique à la création augmentée, pour transmettre les savoirs et valoriser notre culture africaine.
             </p>
             <div class="hero-actions reveal">
+              <button id="downloadCv" class="btn btn-ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Télécharger le CV
+              </button>
               <a href="#recherche" class="btn btn-primary">Découvrir mes travaux</a>
               <a href="#contact" class="btn btn-ghost">Me contacter</a>
             </div>
           </div>
 
           <div class="hero-photo reveal">
-            <img src="assets/photo.jpg" alt="Portrait de Dieuvit Kibamba Niangui" />
+            <img src="assets/photo.jpg" alt="Portrait de Dieuvit Kibamba Niangui" width="360" height="432" />
             <span class="photo-frame"></span>
           </div>
         </div>
@@ -725,7 +785,7 @@
     <div class="cv-page">
       <header class="cv-head">
         <div class="cv-head-text">
-          <h1 class="cv-name">Dieuvit Haïdide Kibamba Niangui</h1>
+          <div class="cv-name" role="heading" aria-level="1">Dieuvit Haïdide Kibamba Niangui</div>
           <p class="cv-title">Chercheur Doctorant — Biochimie &amp; Microbiologie</p>
           <p class="cv-sub">Informaticien · Formateur (IA &amp; Biologie) · Créateur de Contenu propulsé par l'IA</p>
         </div>
